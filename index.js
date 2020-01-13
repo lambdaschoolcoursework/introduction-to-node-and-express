@@ -28,7 +28,6 @@ server.post('/api/users', (request, response) => {
 
 // fetch all users
 server.get('/api/users', (request, response) => {
-    console.log(data.findById(3));
     data.find()
         .then(res => response.status(200).json(res))
         .catch(error => response.status(500).json({message: 'there was an error fetching the list of users'}));
